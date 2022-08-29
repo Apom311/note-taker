@@ -1,5 +1,5 @@
 const fs = require("fs");
-var data = JSON.parse(fs.readFileSync("./db/db.json"));
+var data = JSON.parse(fs.readFileSync("./db/db.json", "utf8"))
 
 module.exports = function(app) {
 
@@ -20,7 +20,7 @@ module.exports = function(app) {
         newNote.id = uniqueId;
         data.push(newNote);
 
-        fs.writeFileSync("../db/db.json", JSON.stringify(data), function(err) {
+        fs.writeFileSync("./db/db.json", JSON.stringify(data), function(err) {
             if(err) throw(err);
         });
     });
@@ -37,7 +37,7 @@ module.exports = function(app) {
             currentNote.id = newId.toString();
             newId++;
         }
-        fs.writeFileSync("../db/db.json", JSON.stringify(data));
+        fs.writeFileSync("./db/db.json", JSON.stringify(data));
         res.json(data);
     });
 }
