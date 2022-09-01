@@ -1,1 +1,14 @@
-[{"title":"Test Title","text":"Test text"},{"title":"jeff","text":"sljs","id":"1"},{"title":"jeff","text":"sljs","id":"2"},{"title":"jeff","text":"5","id":"3"},{"title":"jeff","text":"34","id":"4"}]
+{
+  "notes": [
+    {
+      "title": "Test Title",
+      "text": "Test text",
+      "id": "0"
+    },
+    {
+      "title": "34",
+      "text": "s2",
+      "id": "1"
+    }
+  ]
+}
